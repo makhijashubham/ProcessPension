@@ -15,4 +15,4 @@ phases:
       - echo "Entered the post-build phase"
 artifacts:
    files:
-   - target/taskdefinition.json
+   - target/processenion.jar
