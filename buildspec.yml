@@ -10,12 +10,9 @@ phases:
       commands:
       - echo "Entered build phase"
       - mvn install -Dmaven.test.skip=true
-      - echo " building docker image"
-      - docker build -t service/processpension .
-      - docker tag service/processpension 408832051344.dkr.ecr.ap-south-1.amazonaws.com/pod-15-processpension-docker:processpension
    post_build:
       commands:
       - echo "Entered the post-build phase"
 artifacts:
    files:
-   - /taskdefinition.json
+   - target/taskdefinition.json
