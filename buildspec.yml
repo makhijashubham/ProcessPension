@@ -17,8 +17,6 @@ phases:
    post_build:
       commands:
       - echo "Entered the post-build phase"
-      - docker push 408832051344.dkr.ecr.ap-south-1.amazonaws.com/pod-15-processpension-docker:processpension
-      - printf '[{"name":"processpension-container","imageUri":"%s"}]' 408832051344.dkr.ecr.ap-south-1.amazonaws.com/pod-15-processpension-docker:processpension>taskdefinition.json
 artifacts:
    files:
    - ProcessPension/taskdefinition.json
